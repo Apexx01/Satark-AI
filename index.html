@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satark AI - Automated Penetration Testing Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h2>🛡️ Satark AI</h2>
+            </div>
+            <div class="navbar-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <button class="btn btn--primary btn--sm">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section section--active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>AI-Powered Penetration Testing for SMEs</h1>
+                    <p class="hero-subtitle">Automated vulnerability detection and remediation at 50% the cost of manual testing. Scale your security without breaking the bank.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">$2.74B</div>
+                            <div class="stat-label">Market Size (2025)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12.5%</div>
+                            <div class="stat-label">CAGR Growth</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50%</div>
+                            <div class="stat-label">Cost Reduction</div>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" onclick="showDashboard()">View Demo</button>
+                        <button class="btn btn--outline btn--lg" onclick="showPricing()">See Pricing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <div class="container">
+                <h2>Why Choose Satark AI?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Machine learning algorithms identify vulnerabilities and prioritize remediation based on business impact</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Automated Scanning</h3>
+                        <p>Continuous monitoring with scheduled scans across web apps, networks, and APIs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Smart Remediation</h3>
+                        <p>AI-generated fix suggestions with step-by-step instructions and effort estimates</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Cost Effective</h3>
+                        <p>Up to 50% reduction in testing costs compared to traditional manual penetration testing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem Statement -->
+        <div class="problem-section">
+            <div class="container">
+                <h2>The Problem</h2>
+                <div class="problem-stats">
+                    <div class="problem-card">
+                        <h3>$25,000</h3>
+                        <p>Average cost of manual penetration testing</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>2-4 weeks</h3>
+                        <p>Time required for traditional pen testing</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>60%</h3>
+                        <p>SMEs that can't afford regular security testing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Security Dashboard</h1>
+                <button class="btn btn--primary" onclick="showScanConfig()">New Scan</button>
+            </div>
+
+            <!-- Dashboard Overview -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Recent Scans</h3>
+                    <div class="scan-list" id="scanList">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Vulnerability Summary</h3>
+                    <div class="vulnerability-summary">
+                        <div class="vuln-item vuln-critical">
+                            <span class="vuln-count">3</span>
+                            <span class="vuln-label">Critical</span>
+                        </div>
+                        <div class="vuln-item vuln-high">
+                            <span class="vuln-count">9</span>
+                            <span class="vuln-label">High</span>
+                        </div>
+                        <div class="vuln-item vuln-medium">
+                            <span class="vuln-count">15</span>
+                            <span class="vuln-label">Medium</span>
+                        </div>
+                        <div class="vuln-item vuln-low">
+                            <span class="vuln-count">8</span>
+                            <span class="vuln-label">Low</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Scan Completion Rate</h3>
+                    <div class="chart-container" style="position: relative; height: 200px;">
+                        <canvas id="completionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Vulnerability Trends</h3>
+                    <div class="chart-container" style="position: relative; height: 200px;">
+                        <canvas id="trendsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <button class="btn btn--secondary" onclick="showResults()">View Latest Results</button>
+                <button class="btn btn--outline" onclick="showAIAssistant()">Ask AI Assistant</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scan Configuration Section -->
+    <section id="scan-config" class="section">
+        <div class="container">
+            <h1>Configure New Scan</h1>
+            <div class="scan-config-form">
+                <div class="form-group">
+                    <label class="form-label">Target Type</label>
+                    <select class="form-control">
+                        <option>Web Application</option>
+                        <option>Network Range</option>
+                        <option>API Endpoints</option>
+                        <option>Full Stack</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Target</label>
+                    <input type="text" class="form-control" placeholder="webapp.example.com" value="webapp.example.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Scan Type</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" checked> OWASP Top 10</label>
+                        <label><input type="checkbox" checked> SQL Injection</label>
+                        <label><input type="checkbox"> XSS Detection</label>
+                        <label><input type="checkbox"> Authentication Bypass</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Schedule</label>
+                    <select class="form-control">
+                        <option>Run Now</option>
+                        <option>Schedule for Later</option>
+                        <option>Recurring Weekly</option>
+                        <option>Recurring Monthly</option>
+                    </select>
+                </div>
+
+                <div class="scan-actions">
+                    <button class="btn btn--primary btn--lg" onclick="startScan()">Start Scan</button>
+                    <button class="btn btn--outline" onclick="showDashboard()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section">
+        <div class="container">
+            <div class="results-header">
+                <h1>Scan Results - webapp.example.com</h1>
+                <div class="results-meta">
+                    <span class="status status--success">Completed</span>
+                    <span>Duration: 45 minutes</span>
+                    <span>12 vulnerabilities found</span>
+                </div>
+            </div>
+
+            <div class="results-summary">
+                <div class="risk-score">
+                    <h3>Risk Score: 7.2/10</h3>
+                    <div class="risk-bar">
+                        <div class="risk-fill" style="width: 72%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vulnerabilities-list" id="vulnerabilitiesList">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <div class="results-actions">
+                <button class="btn btn--primary">Export PDF Report</button>
+                <button class="btn btn--secondary" onclick="showAIAssistant()">Get AI Recommendations</button>
+                <button class="btn btn--outline" onclick="showDashboard()">Back to Dashboard</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="section">
+        <div class="container">
+            <h1>AI Security Assistant</h1>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-message chat-ai">
+                        <div class="message-content">
+                            <strong>Satark AI Assistant:</strong> Hello! I've analyzed your latest scan results. You have 1 critical vulnerability that needs immediate attention. Would you like me to explain the SQL injection issue in your login portal?
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" class="form-control" placeholder="Ask me about vulnerabilities, remediation steps, or security best practices...">
+                    <button class="btn btn--primary" onclick="sendMessage()">Send</button>
+                </div>
+                <div class="suggested-questions">
+                    <button class="suggestion-btn" onclick="askQuestion('How do I fix the SQL injection vulnerability?')">How do I fix the SQL injection?</button>
+                    <button class="suggestion-btn" onclick="askQuestion('What should I prioritize first?')">What should I prioritize first?</button>
+                    <button class="suggestion-btn" onclick="askQuestion('Explain the business impact')">Explain the business impact</button>
+                </div>
+            </div>
+            <div class="ai-actions">
+                <button class="btn btn--outline" onclick="showResults()">Back to Results</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h1>Pricing Plans</h1>
+            <p class="pricing-subtitle">Choose the plan that fits your organization's security needs</p>
+            
+            <div class="pricing-grid" id="pricingGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <div class="roi-calculator">
+                <h3>ROI Calculator</h3>
+                <p>Compare with traditional manual penetration testing:</p>
+                <div class="calculator-result">
+                    <div class="cost-comparison">
+                        <div class="cost-item">
+                            <span class="cost-label">Manual Testing (Annual)</span>
+                            <span class="cost-value">$100,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-label">Satark AI Professional</span>
+                            <span class="cost-value">$1,188</span>
+                        </div>
+                        <div class="cost-item savings">
+                            <span class="cost-label">Annual Savings</span>
+                            <span class="cost-value">$98,812</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>

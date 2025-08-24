@@ -1,0 +1,35 @@
+Category,Type,Technical_Feasibility,Market_Impact,Scalability_Potential
+Healthcare & Fintech,Existing to Scale,High,High,High
+Healthcare & Fintech,Existing to Scale,High,High,High
+Healthcare & Fintech,New & Original,Medium,High,High
+Healthcare & Fintech,New & Original,High,Medium,Medium
+AI & Machine Learning,Existing to Scale,High,High,High
+AI & Machine Learning,Existing to Scale,Medium,High,High
+AI & Machine Learning,New & Original,Medium,High,High
+AI & Machine Learning,New & Original,High,Medium,High
+Cybersecurity,Existing to Scale,Medium,High,Medium
+Cybersecurity,New & Original,High,High,High
+Cybersecurity,New & Original,Medium,Medium,High
+Sustainability & Environment,Existing to Scale,Medium,High,High
+Sustainability & Environment,Existing to Scale,High,High,High
+Sustainability & Environment,New & Original,High,High,High
+Sustainability & Environment,New & Original,Medium,Medium,Medium
+AR/VR & Smart Cities,Existing to Scale,High,Medium,Medium
+AR/VR & Smart Cities,New & Original,Medium,High,High
+AR/VR & Smart Cities,New & Original,High,High,High
+AR/VR & Smart Cities,New & Original,Medium,High,High
+Blockchain & Web3,Existing to Scale,Medium,High,High
+Blockchain & Web3,New & Original,High,High,High
+Blockchain & Web3,New & Original,Medium,Medium,Medium
+IoT & Connected Devices,Existing to Scale,High,High,High
+IoT & Connected Devices,New & Original,High,Medium,High
+IoT & Connected Devices,New & Original,Medium,High,High
+Educational Technology,Existing to Scale,High,High,High
+Educational Technology,New & Original,Medium,High,High
+Educational Technology,New & Original,High,Medium,High
+Accessibility & Inclusion,Existing to Scale,High,High,High
+Accessibility & Inclusion,New & Original,Medium,High,High
+Community & Social Impact,Existing to Scale,High,High,High
+Community & Social Impact,New & Original,High,High,High
+Productivity & Automation,Existing to Scale,High,High,High
+Productivity & Automation,New & Original,Medium,High,High
